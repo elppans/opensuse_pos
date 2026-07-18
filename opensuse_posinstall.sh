@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-locdir="$(pwd)"
-bdir="$(dirname "$locdir")"
-export bdir
-
 if command -v zypper ; then
 	sudo zypper --non-interactive refresh
 	sudo zypper -n install sound-theme-yaru kora-icon-theme # Tema 
