@@ -1,1 +1,1 @@
-# opensuse_pos
+# opensuse-tw
