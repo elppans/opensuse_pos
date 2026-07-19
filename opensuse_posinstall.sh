@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-	# Sair imediatamente se algum comando falhar
-	set -e
+# Sair imediatamente se algum comando falhar
+set -e
 
 if command -v zypper; then
 	# Definição dos pacotes divididos por categoria para organização
@@ -9,10 +9,10 @@ if command -v zypper; then
 		# Tema
 		sound-theme-yaru
 		kora-icon-theme
+		# gnome-themes-extras
 
 		# Suporte extensão
-		caffeine-guava
-		gnome-themes-extras
+		gnome-shell-extension-user-theme
 		gtk2-engine-murrine
 
 		# Pacotes Devel
