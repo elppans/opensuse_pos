@@ -41,6 +41,9 @@ fi
 
 sudo npm install --global prettier stylelint # Pacotes Shell (Global)
 
+# Link do diretório de kora para kora-pgrey
+sudo ln -s /usr/share/icons/kora /usr/share/icons/kora-pgrey
+
 mkdir -p ~/build
 
 cd ~/build || exit 1
