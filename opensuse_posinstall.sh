@@ -10,6 +10,7 @@ if command -v zypper; then
 		sound-theme-yaru
 		kora-icon-theme
 		# gnome-themes-extras
+		dbus-launch
 
 		# Suporte extensão
 		gnome-shell-extension-user-theme
@@ -40,9 +41,6 @@ elif command -v apt; then
 fi
 
 sudo npm install --global prettier stylelint # Pacotes Shell (Global)
-
-# Link do diretório de kora para kora-pgrey
-sudo ln -s /usr/share/icons/kora /usr/share/icons/kora-pgrey
 
 mkdir -p ~/build
 
