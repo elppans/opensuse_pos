@@ -36,11 +36,48 @@ if command -v zypper; then
 	echo "==> Instalando pacotes selecionados..."
 	# Invocação única do zypper expandindo o array de pacotes
 	sudo zypper -n install "${PACOTES[@]}"
+
+	# Pacotes Shell (Global)
+	sudo npm install --global prettier stylelint
 elif command -v apt; then
-	apt update
+	PACOTES=(
+		# Tema
+		yaru-theme-sound
+		# kora-icon-theme
+		gnome-themes-extra
+		dbus-x11 # dbus-launch
+
+		# Suporte extensão
+		gnome-shell-extension-appindicator
+		gtk2-engines-murrine
+
+		# Pacotes Devel
+		git
+		make
+
+		# Pacotes Shell*
+		jq*
+		ruby*
+		shellcheck*
+		shfmt*
+		nodejs*
+		npm*
+		stylelint*
+	)
+
+	echo "==> Atualizando repositórios e sistema..."
+	sudo apt update
+	sudo apt -y upgrade
+
+	echo "==> Instalando pacotes selecionados..."
+	# Invocação única do zypper expandindo o array de pacotes
+	sudo apt install "${PACOTES[@]}"
+	
+	# Pacotes Shell (Global)
+	sudo npm install --global prettier stylelint
 fi
 
-sudo npm install --global prettier stylelint # Pacotes Shell (Global)
+
 
 mkdir -p ~/build
 
