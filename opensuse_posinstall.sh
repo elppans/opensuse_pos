@@ -46,7 +46,8 @@ elif command -v apt; then
 		dbus-x11 # dbus-launch
 
 		# Suporte extensão
-		# gnome-shell-extension-appindicator
+		gnome-shell-extensions
+		gnome-shell-extension-appindicator
 		gtk2-engines-murrine
 
 		# Pacotes Devel
