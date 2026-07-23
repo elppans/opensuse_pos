@@ -103,11 +103,19 @@ gnome-extensions install appindicatorsupport@rgcjonas.gmail.com.zip
 mkdir -p ~/build/gnome-shell-extension-caffeine && cd ~/build/gnome-shell-extension-caffeine || exit 1
 curl -JOLk "https://github.com/elppans/gnome-shell-extension-caffeine/releases/download/v60/caffeine@patapon.info.zip"
 gnome-extensions install caffeine@patapon.info.zip
-# gsettings --schemadir ~/.local/share/gnome-shell/extensions/caffeine@patapon.info/schemas/ get org.gnome.shell.extensions.caffeine cli-toggle      # status
-# gsettings --schemadir ~/.local/share/gnome-shell/extensions/caffeine@patapon.info/schemas/ set org.gnome.shell.extensions.caffeine cli-toggle true # Enable/Disable
+
+# https://github.com/micheleg/dash-to-dock
+mkdir -p ~/build/dash-to-dock && cd ~/build/dash-to-dock || exit 1
+curl -JOLk "https://github.com/micheleg/dash-to-dock/releases/download/extensions.gnome.org-v105/dash-to-dock@micxgx.gmail.com.zip"
+gnome-extensions install dash-to-dock@micxgx.gmail.com.zip
+
+# https://github.com/dustin-hawkins/quick-sound-switcher
+mkdir -p ~/build/quick-sound-switcher && cd ~/build/quick-sound-switcher || exit 1
+curl -JOLk "https://github.com/dustin-hawkins/quick-sound-switcher/releases/download/v1.0.1/quick-sound-switcher@dustin-hawkins-v1.0.1.shell-extension.zip"
+gnome-extensions install quick-sound-switcher@dustin-hawkins-v1.0.1.shell-extension.zip
 
 # Ativar as 3 extensões instaladas
-gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'appindicatorsupport@rgcjonas.gmail.com']"
+gsettings set org.gnome.shell enabled-extensions "['user-theme@gnome-shell-extensions.gcampax.github.com', 'caffeine@patapon.info', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'quick-sound-switcher@dustin-hawkins']"
 
 cd ~/build || exit 1
 git clone https://github.com/elppans/archlinux-meta.git
